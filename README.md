@@ -56,7 +56,15 @@ https://www.kaggle.com/c/30-days-of-ml/discussion/266099
 https://www.kaggle.com/c/30-days-of-ml/discussion/265963
 の内容を一読しようと思います。
 
-
+## 2021/08/19
+notebookの方に書いたので概要だけ
+- targetが外れ値の行を除外(targetが4より小さい行を除外) 
+  →targetが多峰性分布になった。次の記事によればLidge回帰やLassoが有効？
+  https://towardsdatascience.com/anchors-and-multi-bin-loss-for-multi-modal-target-regression-647ea1974617
+- 一部のカテゴリ変数は列ごと削除することも考慮に入れる。
+- また、cat6のGは学習・テスト両方ともあり
+- カテゴリ変数をその他で表す方法を学んだ
+- 数値変数同士の相関性は薄い
 
 
 
