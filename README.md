@@ -119,3 +119,23 @@ pandasを用いてカテゴリ変数に変換して分析を行った。<br>
 - 上位陣はstackingで埋まっている。
 - 一層目でどのモデルを使用しているかでもわかればありがたいのだが…
 - foldの分け方から全てをノートに示しているGrandMasterの方がいらっしゃったので、ありがたく参考とする。
+
+## 2021/08/29
+- 何故かGithubに更新ができない…
+順位は次の通り
+![image](https://user-images.githubusercontent.com/78991083/131267442-4953cb14-4ed5-49ff-b41f-43fdb73bc1e2.png)
+- 方法はstackingを利用。
+### 0829_30-days-create-folds.ipynb
+- ↑の通りにfoldを作成し、その後stackingを行った。
+- 予測と使用モデルは次の通り。
+- pred1:GradientBoosting
+- pred2:Ridge
+- pred3:Random Forest
+- pred4:LightGBM
+- (以上第1層)
+- level1_pred_1:XGBRegressor
+- level1_pred_2:RandomForestRegressor
+- level1_pred_3:GradientBoostingRegressor
+- (以上第2層)
+- LinearRegression
+- （最終層）
